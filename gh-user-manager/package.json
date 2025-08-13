@@ -1,0 +1,90 @@
+{
+  "name": "gh-user-manager",
+  "displayName": "Gh User Manager",
+  "description": "VS Code extension to switch/add/delete GitHub users on your system easily.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.2"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "multi-user-thing.png",
+  "activationEvents": [
+    "onCommand:ghUserManager.addProfile",
+    "onCommand:ghUserManager.switchProfile",
+    "onCommand:ghUserManager.listProfiles",
+    "onCommand:ghUserManager.deleteProfile"
+  ],
+  "main": "./out/extension.js",
+  "publisher": "cinfinite",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cinfinit/gh-user-manager-vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cinfinit/gh-user-manager-vscode/issues"
+  },
+  "homepage": "https://github.com/cinfinit/gh-user-manager-vscode#readme",
+  "author": "cinfinit",
+  
+  "contributes": {
+    "commands": [
+      {
+        "command": "ghUserManager.addProfile",
+        "title": "Gh User Manager: Add Profile"
+      },
+      {
+        "command": "ghUserManager.switchProfile",
+        "title": "Gh User Manager: Switch Profile"
+      },
+      {
+        "command": "ghUserManager.listProfiles",
+        "title": "Gh User Manager: List Profiles"
+      },
+      {
+        "command": "ghUserManager.deleteProfile",
+        "title": "Gh User Manager: Delete Profile"
+      }
+    ]
+  },
+  "keywords": [
+    "github",
+    "cli",
+    "git",
+    "user",
+    "profile",
+    "account",
+    "switch",
+    "multiple-users",
+    "git-config",
+    "git-profile",
+    "devtools",
+    "productivity",
+    "developer-tool",
+    "git-identity",
+    "credential-manager",
+    "token-manager",
+    "github-cli",
+    "automation"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
